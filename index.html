@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fitness Tracker App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🏃 Fitness Tracker</h1>
+
+    <!-- Input Form -->
+    <div class="card">
+      <h2>Log Today's Activity</h2>
+
+      <input type="number" id="steps" placeholder="Steps Walked">
+      <input type="text" id="workout" placeholder="Workout Type (e.g. Running)">
+      <input type="number" id="calories" placeholder="Calories Burned">
+      <button onclick="addEntry()">Add Activity</button>
+    </div>
+
+    <!-- Daily Summary -->
+    <div class="card">
+      <h2>Today's Summary</h2>
+      <p>Steps: <span id="totalSteps">0</span></p>
+      <div class="progress">
+        <div id="stepsBar"></div>
+      </div>
+
+      <p>Calories Burned: <span id="totalCalories">0</span></p>
+      <div class="progress">
+        <div id="caloriesBar"></div>
+      </div>
+    </div>
+
+    <!-- Weekly Summary -->
+    <div class="card">
+      <h2>Weekly Progress</h2>
+      <ul id="weeklyList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
